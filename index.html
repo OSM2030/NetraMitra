@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NetraMitra - Your eye care companion</title>
+  <meta name="description" content="NetraMitra gives general guidance for everyday eye problems, before and after eye surgery. Know what's normal. Know when to see your doctor.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M3 24C9 13 16 8 24 8s15 5 21 16c-6 11-13 16-21 16S9 35 3 24z' fill='%23e8f6f7' stroke='%230e7c86' stroke-width='2.5' stroke-linejoin='round'/%3E%3Ccircle cx='24' cy='24' r='9' fill='%230e7c86'/%3E%3Ccircle cx='24' cy='24' r='4' fill='%230a3d42'/%3E%3Ccircle cx='27.5' cy='20.5' r='2' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="demo-banner">
+    Demo / educational prototype. Not a medical diagnosis. Always consult an ophthalmologist.
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a class="brand" href="#home" aria-label="NetraMitra home">
+      <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M3 24C9 13 16 8 24 8s15 5 21 16c-6 11-13 16-21 16S9 35 3 24z" fill="#e8f6f7" stroke="#0e7c86" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="24" cy="24" r="9" fill="#0e7c86"/>
+        <circle cx="24" cy="24" r="4" fill="#0a3d42"/>
+        <circle cx="27.5" cy="20.5" r="2" fill="#fff"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Netra<span class="accent">Mitra</span></span>
+        <span class="brand-tag">Your eye care companion</span>
+      </span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <nav id="nav-links">
+      <a href="#home" data-link="home">Home</a>
+      <a href="#about" data-link="about">About</a>
+      <a href="#contact" data-link="contact">Contact Us</a>
+      <a href="#auth" class="btn btn-small" id="nav-auth">Login / Sign up</a>
+      <a href="#dashboard" class="hidden" id="nav-dashboard" data-link="dashboard">My Dashboard</a>
+      <button class="btn btn-small btn-outline hidden" id="nav-logout" type="button">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section class="view" id="view-home">
+      <div class="hero">
+        <p class="hero-tagline">Know what's normal. Know when to see your doctor.</p>
+        <h1>Welcome to NetraMitra:<br>simple guidance for your eyes, before and after surgery</h1>
+        <p>Not sure if that redness is normal? Get general guidance, care tips and warning signs in minutes, then know when it is time to see your doctor.</p>
+        <a href="#auth" class="btn" id="hero-cta">Get started</a>
+      </div>
+
+      <div class="container">
+        <h2 class="center">How it works</h2>
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon">1</div>
+            <h3>Create an account</h3>
+            <p>Sign up with your name, email and phone number.</p>
+          </div>
+          <div class="card">
+            <div class="icon">2</div>
+            <h3>Choose your situation</h3>
+            <p>Everyday eye problem, pre-surgery or post-surgery help.</p>
+          </div>
+          <div class="card">
+            <div class="icon">3</div>
+            <h3>Get guidance</h3>
+            <p>Receive general advice from trusted sources, plus clear signs to see a doctor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="view hidden" id="view-about">
+      <div class="container narrow">
+        <h1>About NetraMitra</h1>
+        <p><em>Netra</em> means eye and <em>Mitra</em> means friend. NetraMitra started from personal experience. After four eye surgeries, the founder often faced small problems with no quick way to know if they were serious, and had to travel to the hospital even for minor issues.</p>
+        <p>NetraMitra gives patients limited, general guidance so they feel more informed and less anxious between hospital visits.</p>
+
+        <div class="two-col">
+          <div class="card">
+            <h3>&#9989; What we do</h3>
+            <ul>
+              <li>Share general eye-care information from trusted sources</li>
+              <li>Help you understand common symptoms</li>
+              <li>Point out warning signs</li>
+              <li>Remind you to see an ophthalmologist</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>&#10060; What we do not do</h3>
+            <ul>
+              <li>Give a medical diagnosis</li>
+              <li>Replace your doctor</li>
+              <li>Prescribe or change medicines</li>
+              <li>Handle emergencies</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="alert">
+          <strong>Emergency?</strong> Sudden vision loss, severe pain, a chemical splash or an eye injury needs immediate medical care. Go to the nearest hospital.
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="view hidden" id="view-contact">
+      <div class="container narrow">
+        <h1>Contact Us</h1>
+        <p>Questions, feedback or suggestions? Send us a message.</p>
+        <form id="contact-form" class="form" novalidate>
+          <div class="field">
+            <label for="c-name">Name</label>
+            <input type="text" id="c-name" placeholder="Your name">
+            <span class="error" data-error-for="c-name"></span>
+          </div>
+          <div class="field">
+            <label for="c-email">Email</label>
+            <input type="email" id="c-email" placeholder="you@gmail.com">
+            <span class="error" data-error-for="c-email"></span>
+          </div>
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" rows="5" placeholder="How can we help?"></textarea>
+            <span class="error" data-error-for="c-message"></span>
+          </div>
+          <button class="btn" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- AUTH -->
+    <section class="view hidden" id="view-auth">
+      <div class="auth-box">
+        <div class="tabs">
+          <button class="tab active" id="tab-login" type="button">Login</button>
+          <button class="tab" id="tab-signup" type="button">Sign up</button>
+        </div>
+
+        <!-- Login form -->
+        <form id="login-form" class="form" novalidate>
+          <div class="field">
+            <label for="l-email">Email</label>
+            <input type="email" id="l-email" placeholder="you@gmail.com" autocomplete="email">
+            <span class="error" data-error-for="l-email"></span>
+          </div>
+          <div class="field">
+            <label for="l-password">Password</label>
+            <div class="pw-wrap">
+              <input type="password" id="l-password" placeholder="Your password" autocomplete="current-password">
+              <button type="button" class="pw-toggle" data-target="l-password">Show</button>
+            </div>
+            <span class="error" data-error-for="l-password"></span>
+          </div>
+          <span class="error form-error" id="login-error"></span>
+          <button class="btn full" type="submit">Login</button>
+          <p class="switch">New here? <a href="#" id="to-signup">Create an account</a></p>
+        </form>
+
+        <!-- Sign up form -->
+        <form id="signup-form" class="form hidden" novalidate>
+          <div class="field">
+            <label for="s-name">Full name</label>
+            <input type="text" id="s-name" placeholder="Your full name" autocomplete="name">
+            <span class="error" data-error-for="s-name"></span>
+          </div>
+          <div class="field">
+            <label for="s-email">Email (Gmail)</label>
+            <input type="email" id="s-email" placeholder="you@gmail.com" autocomplete="email">
+            <span class="error" data-error-for="s-email"></span>
+          </div>
+          <div class="field">
+            <label for="s-phone">Phone number</label>
+            <input type="tel" id="s-phone" placeholder="10-digit mobile number" maxlength="10" inputmode="numeric" autocomplete="tel">
+            <span class="error" data-error-for="s-phone"></span>
+          </div>
+          <div class="field">
+            <label for="s-password">Password</label>
+            <div class="pw-wrap">
+              <input type="password" id="s-password" placeholder="At least 8 characters, letters and numbers" autocomplete="new-password">
+              <button type="button" class="pw-toggle" data-target="s-password">Show</button>
+            </div>
+            <span class="error" data-error-for="s-password"></span>
+          </div>
+          <div class="field">
+            <label for="s-confirm">Confirm password</label>
+            <input type="password" id="s-confirm" placeholder="Re-enter password" autocomplete="new-password">
+            <span class="error" data-error-for="s-confirm"></span>
+          </div>
+          <div class="field check">
+            <label>
+              <input type="checkbox" id="s-consent">
+              I understand this is general guidance and not a medical diagnosis, and I consent to my details being stored to run this service.
+            </label>
+            <span class="error" data-error-for="s-consent"></span>
+          </div>
+          <span class="error form-error" id="signup-error"></span>
+          <button class="btn full" type="submit">Create account</button>
+          <p class="switch">Already have an account? <a href="#" id="to-login">Login</a></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- DASHBOARD (after login) -->
+    <section class="view hidden" id="view-dashboard">
+      <div class="container">
+        <h1>Welcome, <span id="user-name">there</span></h1>
+        <p class="muted">What do you need help with today?</p>
+
+        <div class="grid-3">
+          <button class="card choice" type="button" data-section="general">
+            <div class="emoji">&#128064;</div>
+            <h3>Normal eye problems</h3>
+            <p>Redness, irritation, eye flu or something in your eye. Get general advice and warning signs.</p>
+            <span class="go">Open &rarr;</span>
+          </button>
+          <button class="card choice" type="button" data-section="pre">
+            <div class="emoji">&#128203;</div>
+            <h3>Pre-surgery help</h3>
+            <p>Upload your pre-operative and medicine slips to understand what to prepare.</p>
+            <span class="go">Open &rarr;</span>
+          </button>
+          <button class="card choice" type="button" data-section="post">
+            <div class="emoji">&#129657;</div>
+            <h3>Post-surgery help</h3>
+            <p>Upload your post-operative documents to follow recovery and spot warning signs.</p>
+            <span class="go">Open &rarr;</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION PLACEHOLDER (built in next steps) -->
+    <section class="view hidden" id="view-section">
+      <div class="container narrow">
+        <a href="#dashboard" class="back">&larr; Back to dashboard</a>
+        <h1 id="section-title">Section</h1>
+        <div class="card">
+          <p id="section-text">This section will be built next.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p><strong>NetraMitra</strong> &middot; Your eye care companion</p>
+    <p>&copy; <span id="year"></span> NetraMitra. General information only, not medical advice. In an emergency, go to the nearest hospital.</p>
+  </footer>
+
+  <div class="toast hidden" id="toast" role="status"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
